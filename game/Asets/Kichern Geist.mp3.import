@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kichern Geist.mp3-e76503daa14841ffa6c9febd1ccce8a6.mp3str"
+
+[deps]
+
+source_file="res://Asets/Kichern Geist.mp3"
+dest_files=[ "res://.import/Kichern Geist.mp3-e76503daa14841ffa6c9febd1ccce8a6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
