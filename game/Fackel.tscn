@@ -3,10 +3,12 @@
 [ext_resource path="res://Asets/Light.png" type="Texture" id=1]
 [ext_resource path="res://Asets/ttt.png" type="Texture" id=2]
 [ext_resource path="res://Asets/Fackel.png" type="Texture" id=3]
-[ext_resource path="res://Asets/Forgraund1.png" type="Texture" id=4]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -65.1936, 107.576, -23.1275, 109.164, -23.9212, 39.3182, 54.6551, 36.1434, 23.7008, -4.33534, -119.165, 0.426865, -149.326, 25.8253, -158.85, 33.7623, -63.6062, 30.5875 )
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/Forgraund1.png-1608ca3ed2611823c30cd0645997f840.stex"
 
 [sub_resource type="Animation" id=2]
 resource_name = "off"
@@ -158,7 +160,7 @@ texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="Backgraund"]
 position = Vector2( 209, 117.5 )
-texture = ExtResource( 4 )
+texture = SubResource( 5 )
 
 [node name="Fackel" type="Node2D" parent="."]
 position = Vector2( 51.613, 52.5643 )

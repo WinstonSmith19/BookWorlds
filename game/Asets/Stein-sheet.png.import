@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Forgraund1.png-1608ca3ed2611823c30cd0645997f840.stex"
+path="res://.import/Stein-sheet.png-33587756a45ae0f75fee7426bc7fd3ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asets/Forgraund1.png"
-dest_files=[ "res://.import/Forgraund1.png-1608ca3ed2611823c30cd0645997f840.stex" ]
+source_file="res://Asets/Stein-sheet.png"
+dest_files=[ "res://.import/Stein-sheet.png-33587756a45ae0f75fee7426bc7fd3ee.stex" ]
 
 [params]
 

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MapZeug/Stoun.tscn" type="PackedScene" id=1]
+
+[node name="Map" type="Node2D"]
+position = Vector2( 355, 444.594 )
+
+[node name="Stoun" parent="." instance=ExtResource( 1 )]
+position = Vector2( -19.0002, 19.4057 )
+
+[node name="Stoun2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12.9998, 19.4057 )
+
+[node name="Stoun3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 141, 19.4057 )
+
+[node name="Stoun4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 109, 19.4057 )
+
+[node name="Stoun5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 76.9998, 19.4057 )
+
+[node name="Stoun9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 205, 19.4057 )
+
+[node name="Stoun8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 205, -12.5943 )
+
+[node name="Stoun7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 237, 19.4057 )
+
+[node name="Stoun10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 173, 19.4057 )
+
+[node name="Stoun11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 237, -12.5943 )
+
+[node name="Stoun6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 44.9998, 19.4057 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 117, -44.5943 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
