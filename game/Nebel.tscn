@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asets/godot.png" type="Texture" id=3]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+uniform vec3 color = vec3(1.0,1.0,1.0);
+uniform int OKTIVE = 5;
+
+float rand(vec2 coord){
+	return fract(sin(dot(coord,vec2(56,78))*1000.0)*1000.0);
+	} 
+
+float noice(vec2 coord){
+	vec2 i = floor(coord);
+	vec2 f = fract(coord);
+	
+	float a = rand(i);
+	float b = rand(i + vec2(1.0,0.0));
+	float c = rand(i + vec2(0.0,1.0));
+	float d = rand(i + vec2(1.0,1.0));
+	
+	vec2 cubic = f * f *(3.0 - 2.0 * f);
+	
+	return mix(a,b,cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
+	} 
+
+float fbm(vec2 coord){
+	float value = 0.0;
+	float scale = 0.5;
+	float tims = 0.0;
+	
+	for(int i=0;i<OKTIVE;i++){
+		value+= noice(coord) * scale;
+		tims += scale;
+		coord *= 2.0;
+		scale *= 0.5; 
+		}
+	return value/tims ;
+	}
+
+void fragment(){
+	vec2 coord = UV * 20.0;
+	//richtung des nebel
+	//0.5 = SPEED
+	vec2 motion = vec2(fbm(coord + vec2(TIME * 0.5 , TIME * - 0.5)));
+	float final = fbm(coord + motion);
+	//0.5 = durchsichtichkeit
+	COLOR = vec4(color,final * 0.5);
+	
+
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/color = Vector3( 1, 1, 1 )
+shader_param/OKTIVE = 5
+
+[node name="Nebel" type="Node2D"]
+
+[node name="godot" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 252.938, 311.938 )
+scale = Vector2( 2.23167, 1.49389 )
+texture = ExtResource( 3 )
